@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.console-output {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.console-output p {
+    margin: 0;
+}
+</style>
+    <title>JavaScript Operations</title>
+</head>
+<body>
+  <h2>JavaScript Operations</h2>
+    <div class="console-output">
+        <p id="exponential-output"></p>
+        <p id="limited-digits-output"></p>
+        <p id="number-to-string-output"></p>
+        <p id="negative-infinity-output"></p>
+    </div>
+    <script >
+    // Exponential value
+        let base = 2;
+        let exponent = 3;
+        let resultExponential = Math.pow(base, exponent);
+        document.getElementById("exponential-output").innerText = `Exponential value of ${base}^${exponent}: ${resultExponential}`;
+        // Limit the number of digits after the decimal value
+        let number = 3.14159265359;
+        let limitedNumber = number.toFixed(2);
+        document.getElementById("limited-digits-output").innerText = `Number with 2 digits after decimal: ${limitedNumber}`;
+        // Convert a number to string
+        let num = 42;
+        let numAsString = num.toString();
+        document.getElementById("number-to-string-output").innerText = `Number as string: ${numAsString}`;
+        // Return negative infinity
+        let negativeInfinity = Number.NEGATIVE_INFINITY;
+        document.getElementById("negative-infinity-output").innerText = `Negative Infinity: ${negativeInfinity}`;
+    </script>
+</body>
+</html>

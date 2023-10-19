@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+</head>
+
+<body>
+    <h2>String Operations</h2>
+
+    <script>
+        // script.js
+
+// (1) Return the character at a specified location
+var str1 = "Hello, World!";
+var charAtIndex = str1.charAt(4);
+console.log("(1) Character at index 4:", charAtIndex);
+
+// (2) Return the Unicode of the character at the specified index
+var unicodeAtIndex = str1.charCodeAt(4);
+console.log("(2) Unicode at index 4:", unicodeAtIndex);
+
+// (3) Join two or more strings and return a new joined string
+var str2 = " Welcome";
+var joinedString = str1.concat(str2);
+console.log("(3) Joined String:", joinedString);
+
+// (4) Convert Unicode value to string
+var unicodeValue = 65;
+var charFromUnicode = String.fromCharCode(unicodeValue);
+console.log("(4) Character from Unicode 65:", charFromUnicode);
+
+// (5) Convert a string to uppercase letters
+var lowercaseString = "hello, world!";
+var uppercaseString = lowercaseString.toUpperCase();
+console.log("(5) Uppercase String:", uppercaseString);
+
+// Display the results on the HTML document
+var resultDiv = document.createElement('div');
+resultDiv.innerHTML = `
+    <p>(1) Character at index 4: ${charAtIndex}</p>
+    <p>(2) Unicode at index 4: ${unicodeAtIndex}</p>
+    <p>(3) Joined String: ${joinedString}</p>
+    <p>(4) Character from Unicode 65: ${charFromUnicode}</p>
+    <p>(5) Uppercase String: ${uppercaseString}</p>
+`;
+
+document.body.appendChild(resultDiv);
+
+    </script>
+</body>
+
+</html>

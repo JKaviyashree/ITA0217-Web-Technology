@@ -1,0 +1,14 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1603484477859-abe6a73f9366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2xkJTIwcGFwZXIlMjB0ZXh0dXJlfGVufDB8fDB8fHww&w=1000&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #f0f0f0;
+    height: 100vh;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h1 {
+    margin-top: 150px; 
+}

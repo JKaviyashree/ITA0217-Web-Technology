@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Odd Numbers</title>
+</head>
+
+<body>
+    <div class="container">
+        <label for="numbers">Enter numbers separated by commas:</label>
+        <input type="text" id="numbers" placeholder="e.g., 1, 2, 3">
+        <button onclick="findNearestOddNumbers()">Find Nearest Odd Numbers</button>
+        <div id="result"></div>
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+</style>
+<script>
+    function findNearestOddNumbers() {
+        let inputNumbers = document.getElementById("numbers").value.split(",").map(Number);
+        let resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = ""; // Clear previous results
+    
+        for (let i = 0; i < inputNumbers.length; i++) {
+            let nearestOdd = findNearestOdd(inputNumbers[i]);
+            let resultText = `Nearest odd number to ${inputNumbers[i]} is ${nearestOdd}`;
+            let resultParagraph = document.createElement("p");
+            resultParagraph.textContent = resultText;
+            resultDiv.appendChild(resultParagraph);
+        }
+    }
+    
+    function findNearestOdd(number) {
+        if (number % 2 === 1) {
+            return number;
+        } else {
+            let oddNumber1 = (number % 2 === 0) ? number - 1 : number + 1;
+            let oddNumber2 = (number % 2 === 0) ? number + 1 : number - 1;
+            return Math.abs(number - oddNumber1) < Math.abs(number - oddNumber2) ? oddNumber1 : oddNumber2;
+        }
+    }
+    </script>
+</body>
+
+</html>

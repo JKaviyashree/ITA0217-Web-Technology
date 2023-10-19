@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Display</title>
+</head>
+
+<body>
+    <h1 id="datetime"></h1>
+
+    <script>// script.js
+
+        function updateDateTime() {
+            var currentDate = new Date();
+            var dateString = currentDate.toDateString();
+            var timeString = currentDate.toLocaleTimeString();
+        
+            var dateTimeString = dateString + ' ' + timeString;
+            document.getElementById('datetime').innerText = 'Current Date and Time: ' + dateTimeString;
+        }
+        
+        // Call the function initially and update it every second (1000 milliseconds)
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+        </script>
+</body>
+
+</html>
